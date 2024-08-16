@@ -7,22 +7,8 @@ from discord.ext.commands.cooldowns import BucketType
 import os
 import json
 
-async def deal_user_message(message):
-    if message.content.startswith("$insult"):
-        random_insult = getInsult()
-        await message.channel.send(random_insult)
 
-    if message.content.startswith("$joke"):
-        random_joke = getJoke()
-        await message.channel.send(random_joke)
 
-    if message.content.startswith("$comp"):
-        random_comp = getCompliment()
-        await message.channel.send(random_comp)
-
-    if message.content.startswith("$inspire"):
-        quote = get_quote()
-        await message.channel.send(quote)
 
 
 def getInsult():
@@ -60,5 +46,3 @@ def getJoke():
             return response.json()['joke']
     else:
         return random.choice(open('content/jokes.txt').read().splitlines())
-
-print(getJoke())
