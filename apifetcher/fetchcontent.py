@@ -1,3 +1,5 @@
+import requests
+
 def getInsult():
     response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
     return response.json()['insult']
