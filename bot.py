@@ -14,7 +14,7 @@ client = Client(intents=intents)
 
 @client.event()
 async def on_ready():
-    print("Logged in as, "+ client.user +". Have fun my boy!")
+    print("Logged in as, "+ client.user +". Have fun!")
 
 @client.event()
 async def member_joins(member):

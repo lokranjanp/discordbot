@@ -1,4 +1,5 @@
 import requests
+import random
 from discord import *
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -25,13 +26,21 @@ async def deal_user_message(message):
 
 
 def getInsult():
-    response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
-    return response.json()['insult']
+    switcher = random.randint(1, 10)
+    if switcher%2:
+        response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
+        return response.json()['insult']
+    else:
+        return random.choice(open('content/insults.txt').read().splitlines())
 
 
 def getCompliment():
-    response = requests.get("https://complimentr.com/api")
-    return response.json()['compliment']
+    switcher = random.randint(1, 10)
+    if switcher % 2:
+        response = requests.get("https://complimentr.com/api")
+        return response.json()['compliment']
+    else:
+        return random.choice(open('content/compliments.txt').read().splitlines())
 
 
 def get_quote():
@@ -41,11 +50,15 @@ def get_quote():
     return quote
 
 
-#
 def getJoke():
-    response = requests.get("https://sv443.net/jokeapi/v2/joke/Any")
-    if (response.json()['type'] == "twopart"):
-        print([response.json()['setup'], response.json()['delivery']])
-        return [response.json()['setup'], response.json()['delivery']]
+    switcher = random.randint(1, 11)
+    if switcher % 2:
+        response = requests.get("https://v2.jokeapi.dev/joke/Programming,Dark,Pun")
+        if (response.json()['type'] == "twopart"):
+            return [response.json()['setup'], response.json()['delivery']]
+        else:
+            return response.json()['joke']
     else:
-        return response.json()['joke']
+        return random.choice(open('content/jokes.txt').read().splitlines())
+
+print(getJoke())
