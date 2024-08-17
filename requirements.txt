@@ -14,9 +14,6 @@ blis==0.7.11
 catalogue==2.0.10
 certifi==2024.7.4
 charset-normalizer==3.3.2
-ChatterBot==1.0.2
-chatterbot-corpus==1.2.0
-ChatterBot2==1.1.0a7
 click==8.1.7
 cloudpathlib==0.18.1
 confection==0.1.5
@@ -30,7 +27,6 @@ fastjsonschema==2.20.0
 flexcache==0.3
 flexparser==0.3.1
 frozenlist==1.4.1
-idna @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_a12xpo84t2/croot/idna_1714398852854/work
 importlib_metadata==8.2.0
 ipython==8.12.3
 jedi==0.19.1
@@ -89,7 +85,6 @@ soupsieve==2.6
 spacy==3.7.5
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
-SQLAlchemy==1.2.19
 srsly==2.4.8
 stack-data==0.6.3
 thinc==8.2.5
