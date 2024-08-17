@@ -30,6 +30,7 @@ fastjsonschema==2.20.0
 flexcache==0.3
 flexparser==0.3.1
 frozenlist==1.4.1
+idna @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_a12xpo84t2/croot/idna_1714398852854/work
 importlib_metadata==8.2.0
 ipython==8.12.3
 jedi==0.19.1
