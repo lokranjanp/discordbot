@@ -6,6 +6,7 @@ from discord.ext.commands import Bot
 from discord.ext.commands.cooldowns import BucketType
 from typing import Final
 from dotenv import *
+import os
 from fetchcontent import *
 
 load_dotenv()
@@ -50,7 +51,7 @@ async def deal_user_message(message):
 
 
 def reaction():
-    return random.choice(["🍆", "🗿", "😮‍💨", "❌", "🤓", "🥸", "🤡", "🍆", "🍆", "🍆", "🍆", "🍆", "🍆", "🍆"])
+    return random.choice(["🍆", "🗿", "😮‍💨", "❌", "🤓", "🥸", "🤡", "🍆", "🍆", "🍆", "🍆"])
 
 
 async def resistant(user):

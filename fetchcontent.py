@@ -1,10 +1,5 @@
 import requests
 import random
-from discord import *
-from discord.ext import commands
-from discord.ext.commands import Bot
-from discord.ext.commands.cooldowns import BucketType
-import os
 import json
 
 def getInsult():
