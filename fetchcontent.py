@@ -7,10 +7,6 @@ from discord.ext.commands.cooldowns import BucketType
 import os
 import json
 
-
-
-
-
 def getInsult():
     switcher = random.randint(1, 10)
     if switcher%2:
@@ -21,11 +17,6 @@ def getInsult():
 
 
 def getCompliment():
-    switcher = random.randint(1, 10)
-    if switcher % 2:
-        response = requests.get("https://complimentr.com/api")
-        return response.json()['compliment']
-    else:
         return random.choice(open('content/compliments.txt').read().splitlines())
 
 
@@ -37,11 +28,11 @@ def get_quote():
 
 
 def getJoke():
-    switcher = random.randint(1, 11)
+    switcher = random.randint(1, 10)
     if switcher % 2:
         response = requests.get("https://v2.jokeapi.dev/joke/Programming,Dark,Pun")
         if (response.json()['type'] == "twopart"):
-            return [response.json()['setup'], response.json()['delivery']]
+            return response.json()['setup'], response.json()['delivery']
         else:
             return response.json()['joke']
     else:
